@@ -1,0 +1,17 @@
+{
+  "id": "com.shsh-x.spellblocker",
+  "name": "Spell Blocker",
+  "author": "shsh-x",
+  "modVer": "1.0.0",
+  "description": "Lock skill slots and passives with custom hotkeys.",
+  "tags": [
+    "Gameplay",
+    "Cheat"
+  ],
+  "supportedGameVer": [
+    "*"
+  ],
+  "assemblies": [
+    "SpellBlocker.dll"
+  ]
+}

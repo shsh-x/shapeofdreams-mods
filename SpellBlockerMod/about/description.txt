@@ -1,0 +1,26 @@
+[h1]Spell Blocker[/h1]
+
+Locks your skill slots so you don't accidentally cast them. Or so you don't obliterate your teammates during confusion debuffs. Whatever reason you can come up with is good enough to try it.
+
+Press key to lock, press again to unlock. That's literally it.
+
+[h2]Default Keys[/h2]
+[list]
+[*] [b]Alt + 1..4[/b] : Lock / unlock skill slots 1 to 4
+[*] [b]Alt + 5[/b] : Lock dash
+[*] [b]Alt + 6[/b] : Lock identity memory (also stops its passives like chain procs)
+[*] [b]Alt + 0[/b] : Unlock everything
+[/list]
+
+Keys can be rebound in [b]Settings -> Mods -> Spell Blocker[/b] (or you can turn off the Alt requirement there if you prefer).
+
+[h2]Multiplayer[/h2]
+Host needs to have this installed for it to work. In solo play you are the host anyway.
+And this is NOT the host-only mod - guests need to install it too (if they need it at all).
+
+[h2]Source[/h2]
+https://github.com/shsh-x/shapeofdreams-mods
+
+If you're a modder, consider checking better modding docs (it's great in so many ways, you just have to try it). It's pretty (very) raw at the moment of posting it, but already usable, and I'll keep adding more info and tweaking UI in my free time.
+I won't post a direct link here because I'm poor and can afford only .xyz domain (bc it'd look sus) so you can check out the insides first, then look at the live docs page from the repo desc.
+https://github.com/DocsHub-SoD

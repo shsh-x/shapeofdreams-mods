@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoStdLib>true</NoStdLib>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>SpellBlocker</AssemblyName>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AssemblyTitle>SpellBlocker</AssemblyTitle>
+    <AssemblyProduct>SpellBlocker</AssemblyProduct>
+    <AssemblyCompany>shsh-x</AssemblyCompany>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+    <AssemblyConfiguration>Release</AssemblyConfiguration>
+    
+    <GameDir Condition="'$(GameDir)' == ''">D:\Games\SteamLibrary\steamapps\common\Shape of Dreams</GameDir>
+    <GameManagedDir>$(GameDir)\Shape of Dreams_Data\Managed</GameManagedDir>
+    <GameModDir>$(GameDir)\Mods\SpellBlockerMod</GameModDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="mscorlib"><HintPath>$(GameManagedDir)\mscorlib.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="netstandard"><HintPath>$(GameManagedDir)\netstandard.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="System"><HintPath>$(GameManagedDir)\System.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="System.Core"><HintPath>$(GameManagedDir)\System.Core.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(GameManagedDir)\0Harmony.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Assembly-CSharp"><HintPath>$(GameManagedDir)\Assembly-CSharp.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Dew.Core"><HintPath>$(GameManagedDir)\Dew.Core.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Unity.InputSystem"><HintPath>$(GameManagedDir)\Unity.InputSystem.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(GameManagedDir)\UnityEngine.CoreModule.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(GameManagedDir)\UnityEngine.InputLegacyModule.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Mirror"><HintPath>$(GameManagedDir)\Mirror.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Unity.TextMeshPro"><HintPath>$(GameManagedDir)\Unity.TextMeshPro.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.UI"><HintPath>$(GameManagedDir)\UnityEngine.UI.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.UIModule"><HintPath>$(GameManagedDir)\UnityEngine.UIModule.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(GameManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath><Private>False</Private></Reference>
+  </ItemGroup>
+
+  <Target Name="DeployToGame" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(GameModDir)" />
+  </Target>
+</Project>
